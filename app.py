@@ -5,25 +5,20 @@ from db import run_query, execute_command, get_connection
 app = Flask(__name__)
 
 QUERY = """
-select 'ALTER SYSTEM KILL SESSION '|| ''''||s.sid||','||s.serial#||'''' ||' IMMEDIATE' AS KILL, 
-       s.sql_address,
-       s.inst_id,
+select 'ALTER SYSTEM KILL SESSION '|| ''''||s.sid||','||s.serial#||'''' ||' IMMEDIATE' AS KILL,
+       trunc(s.last_call_et/3600) horas,
+       trunc(s.last_call_et/60) minutos,
        s.sid,
        s.serial#,
        s.username,
+       s.machine,
        p.spid,
        s.osuser,
-       s.EVENT,
-       trunc(s.last_call_et/3600) horas,
-       trunc(s.last_call_et/60) minutos,
-       s.machine,
        s.client_info,
-       s.program,
+       s.EVENT,
        to_char(s.LOGON_TIME,'dd/mm/yyyy hh24:mi:ss') LOGON_TIME,
        sysdate HORA_ATUAL,
-       s.PREV_SQL_ADDR,
-       s.paddr,
-       s.taddr,
+       s.program,
        s.machine
 from gv$session s, gv$process p
 WHERE s.paddr = p.addr
