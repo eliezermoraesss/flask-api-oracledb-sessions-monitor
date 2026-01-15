@@ -29,10 +29,11 @@ A ferramenta exibe todas as sessões de usuários conectados, mostrando informa�
 ✅ Monitoramento em tempo real das sessões ativas no Oracle  
 ✅ Ação manual para matar uma sessão específica  
 ✅ Ação global para matar todas as sessões  
+✅ **Encerramento automático de sessões com eventos contendo 'lock'**  
 ✅ Atualização automática da tela (refresh a cada 3 segundos)  
 ✅ Auto Kill automático ao atingir 20 sessões ativas  
 ✅ Visualização amigável com **Bootstrap 5.3**  
-✅ Separação de camadas entre aplicação Flask e camada de banco de dados (`db.py`)
+✅ Separação de camadas entre aplicação Flask e camada de banco de dados (`db.py`)  
 
 ---
 
@@ -120,11 +121,12 @@ A aplicação apresenta uma interface limpa e responsiva, com:
 
 ## 🧠 Lógica de Funcionamento
 
-1. A cada segundo, o **APS Scheduler** executa a query em `gv$session` e `gv$process`;
-2. Os resultados são atualizados em cache (`last_result`);
-3. O template `index.html` renderiza esses dados;
-4. O botão **Kill** executa o comando `ALTER SYSTEM KILL SESSION '<sid>,<serial>' IMMEDIATE`;
-5. Se o total de sessões ≥ 20, o sistema executa o **auto kill** automaticamente.
+1. A cada segundo, o **APS Scheduler** executa a query em `gv$session` e `gv$process`;  
+2. Os resultados são atualizados em cache (`last_result`);  
+3. O template `index.html` renderiza esses dados;  
+4. O botão **Kill** executa o comando `ALTER SYSTEM KILL SESSION '<sid>,<serial>' IMMEDIATE`;  
+5. Se o total de sessões ≥ 20, o sistema executa o **auto kill** automaticamente;  
+6. **Sessões com eventos contendo 'lock' são encerradas automaticamente, exceto as do usuário SYSTEM.**  
 
 ---
 
