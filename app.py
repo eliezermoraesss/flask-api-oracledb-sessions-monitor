@@ -78,14 +78,16 @@ def kill_all():
     kill_idx = cols.index("KILL")
     user_idx = cols.index("USERNAME")
     horas_idx = cols.index("HORAS")
+    event_idx = cols.index("EVENT")
 
     killed_count = 0
 
     for r in rows:
         username = str(r[user_idx]).upper()
         horas = int(r[horas_idx])
+        event = str(r[event_idx]).lower()
 
-        if username != "SYSTEM" and horas >= 12:  # Protege usuário SYSTEM e verifica HORA
+        if username != "SYSTEM" and (horas >= 12 or 'lock' in event):  # Protege usuário SYSTEM e verifica HORA
             cmd = r[kill_idx].strip().rstrip(";")
             try:
                 execute_command(cmd)
@@ -93,7 +95,7 @@ def kill_all():
             except Exception as e:
                 print(f"Erro ao matar sessão de {username}: {e}")
 
-    print(f"{killed_count} sessões com HORA >= 12 foram encerradas.")
+    print(f"{killed_count} sessões com foram encerradas.")
     return redirect(url_for("index"))
 
 
