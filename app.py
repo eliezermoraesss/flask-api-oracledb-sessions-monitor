@@ -154,8 +154,8 @@ if __name__ == "__main__":
     america_sp = pytz.timezone("America/Sao_Paulo")
     scheduler = BackgroundScheduler(timezone=america_sp)
 
-    scheduler.add_job(monitor_sessions, IntervalTrigger(seconds=4))
-    scheduler.add_job(scheduled_kill_all, IntervalTrigger(seconds=8))
+    scheduler.add_job(monitor_sessions, IntervalTrigger(seconds=3))
+    scheduler.add_job(scheduled_kill_all, IntervalTrigger(seconds=7))
 
     scheduler.start()
     logger.info("Scheduler iniciado")
