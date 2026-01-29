@@ -36,6 +36,10 @@
 
     <div class="d-flex align-items-center justify-content-between mb-3">
 
+        <a href="{{ url_for('logs') }}" class="btn btn-primary">
+          📊 Monitoramento
+        </a>
+
       <!-- Mostrar botão apenas se houver 20 ou mais sessões -->
       {% if total_sessoes >= 20 %}
         <a href="{{ url_for('kill_all') }}" class="btn btn-danger">

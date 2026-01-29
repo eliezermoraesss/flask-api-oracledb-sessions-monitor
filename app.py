@@ -54,6 +54,18 @@ sessions_handler = RotatingFileHandler(
 sessions_handler.setFormatter(logging.Formatter("%(message)s"))
 sessions_logger.addHandler(sessions_handler)
 
+SYSTEM_LOG_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "logs",
+    "oracle_kill_monitor.log"
+)
+
+SESSIONS_LOG_PATH = os.path.join(
+    os.path.dirname(os.path.abspath(__file__)),
+    "logs",
+    "sessions_snapshot.log"
+)
+
 # -------------------------------------------------------------------
 # APP
 # -------------------------------------------------------------------
@@ -169,6 +181,44 @@ def kill_sessions_automatic():
 @app.route("/")
 def index():
     return render_template("index.html", data=last_result)
+
+# -------------------------------------------------------------------
+# OBSERVABILIDADE SYSTEM LOGS
+# -------------------------------------------------------------------
+@app.route("/logs")
+def logs():
+    try:
+        if os.path.exists(SYSTEM_LOG_PATH):
+            with open(SYSTEM_LOG_PATH, "r", encoding="utf-8") as f:
+                log_content = f.read()
+        else:
+            log_content = "Arquivo de log não encontrado."
+    except Exception as e:
+        log_content = f"Erro ao ler log: {e}"
+
+    return render_template(
+        "logs.html",
+        log_content=log_content
+    )
+
+# -------------------------------------------------------------------
+# OBSERVABILIDADE SESSIONS SNAPSHOT
+# -------------------------------------------------------------------
+@app.route("/sessions_snapshot")
+def sessions_snapshot():
+    try:
+        if os.path.exists(SESSIONS_LOG_PATH):
+            with open(SESSIONS_LOG_PATH, "r", encoding="utf-8") as f:
+                log_content = f.read()
+        else:
+            log_content = "Arquivo de log não encontrado."
+    except Exception as e:
+        log_content = f"Erro ao ler log: {e}"
+
+    return render_template(
+        "sessions_logs.html",
+        log_content=log_content
+    )
 
 # -------------------------------------------------------------------
 # KILL ALL MANUAL
