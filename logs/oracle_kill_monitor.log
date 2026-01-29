@@ -1,0 +1,151 @@
+2026-01-29 10:41:04,416 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-01-29 10:41:04,505 | INFO | Scheduler iniciado
+2026-01-29 10:41:07,843 | INFO | Sessões monitoradas: 8 ativas
+2026-01-29 10:41:10,860 | INFO | Sessões monitoradas: 12 ativas
+2026-01-29 10:41:11,518 | INFO | 
+Job automático iniciado
+2026-01-29 10:41:11,857 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:12,327 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 550, T_NAME= DEFAULT TASK-19206 | CMD = ALTER SYSTEM KILL SESSION '2172,41918' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:12,747 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:13,183 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:13,675 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:13,888 | INFO | Sessões monitoradas: 6 ativas
+2026-01-29 10:41:14,041 | ERROR | Erro ao matar sessão SANKHYA: ORA-00026: missing or invalid session ID
+Help: https://docs.oracle.com/error-help/db/ora-00026/
+2026-01-29 10:41:14,431 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:14,770 | ERROR | Erro ao matar sessão SANKHYA: ORA-00026: missing or invalid session ID
+Help: https://docs.oracle.com/error-help/db/ora-00026/
+2026-01-29 10:41:15,187 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:16,630 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:16,878 | INFO | Sessões monitoradas: 9 ativas
+2026-01-29 10:41:16,985 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:17,013 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 10:41:17,014 | INFO | Job automático finalizado
+2026-01-29 10:41:18,514 | INFO | 
+Job automático iniciado
+2026-01-29 10:41:18,906 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 550, T_NAME= DEFAULT TASK-19206 | CMD = ALTER SYSTEM KILL SESSION '1261,14610' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:19,231 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:19,576 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:19,965 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:19,965 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:41:20,304 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:20,615 | ERROR | Erro ao matar sessão SANKHYA: ORA-00026: missing or invalid session ID
+Help: https://docs.oracle.com/error-help/db/ora-00026/
+2026-01-29 10:41:20,915 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:21,484 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:21,511 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 10:41:21,512 | INFO | Job automático finalizado
+2026-01-29 10:41:22,795 | INFO | Sessões monitoradas: 8 ativas
+2026-01-29 10:41:25,509 | INFO | 
+Job automático iniciado
+2026-01-29 10:41:25,817 | INFO | Sessões monitoradas: 6 ativas
+2026-01-29 10:41:25,986 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 632, T_NAME= DEFAULT TASK-19219 | CMD = ALTER SYSTEM KILL SESSION '473,58692' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:27,345 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = DB FILE SEQUENTIAL READ | CLIENT = U= 550, T_NAME= DEFAULT TASK-19206 | CMD = ALTER SYSTEM KILL SESSION '236,59251' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:27,724 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE TO CLIENT | CLIENT = U= 648, T_NAME= DEFAULT TASK-19231 | CMD = ALTER SYSTEM KILL SESSION '1835,42556' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:28,255 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:28,569 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:28,869 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 10:41:28,916 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE TO CLIENT | CLIENT = U= 26, T_NAME= DEFAULT TASK-19191 | CMD = ALTER SYSTEM KILL SESSION '1721,59302' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:29,191 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:29,213 | INFO | Total de sessões encerradas: 4
+
+2026-01-29 10:41:29,213 | INFO | Job automático finalizado
+2026-01-29 10:41:31,854 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 10:41:32,504 | INFO | 
+Job automático iniciado
+2026-01-29 10:41:32,932 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = DB FILE SEQUENTIAL READ | CLIENT = U= 27, T_NAME= DEFAULT TASK-19219 | CMD = ALTER SYSTEM KILL SESSION '2063,64122' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:33,294 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:33,606 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:33,628 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 10:41:33,628 | INFO | Job automático finalizado
+2026-01-29 10:41:34,824 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:41:38,917 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:41:39,509 | INFO | 
+Job automático iniciado
+2026-01-29 10:41:39,936 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 0, T_NAME= SW.DEFAULT.SCHEDULER_WORKER-1 | CMD = ALTER SYSTEM KILL SESSION '1487,19128' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:39,937 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 10:41:39,937 | INFO | Job automático finalizado
+2026-01-29 10:41:40,927 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 10:41:43,834 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 10:41:46,509 | INFO | 
+Job automático iniciado
+2026-01-29 10:41:46,816 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:41:46,878 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:47,155 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:47,515 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:47,539 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 10:41:47,539 | INFO | Job automático finalizado
+2026-01-29 10:41:49,818 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:41:52,813 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 10:41:53,506 | INFO | 
+Job automático iniciado
+2026-01-29 10:41:53,838 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MORE DATA FROM CLIENT | CLIENT = U= 367, T_NAME= CABECALHONOTA:DATAPAGER_9464DBE1DF84890EB2CB1DEE | CMD = ALTER SYSTEM KILL SESSION '1835,14155' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:54,173 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:41:54,536 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE TO CLIENT | CLIENT = U= 47, T_NAME= DEFAULT TASK-19220 | CMD = ALTER SYSTEM KILL SESSION '2172,42221' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:41:54,870 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:41:54,897 | INFO | Total de sessões encerradas: 2
+
+2026-01-29 10:41:54,897 | INFO | Job automático finalizado
+2026-01-29 10:41:55,812 | INFO | Sessões monitoradas: 6 ativas
+2026-01-29 10:41:59,851 | INFO | Sessões monitoradas: 10 ativas
+2026-01-29 10:42:00,509 | INFO | 
+Job automático iniciado
+2026-01-29 10:42:00,808 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:42:01,173 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:42:01,458 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:42:01,742 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:42:02,080 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:42:02,467 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:42:02,862 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 0, T_NAME= SW.DEFAULT.SCHEDULER_WORKER-2 | CMD = ALTER SYSTEM KILL SESSION '1835,47677' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:42:03,285 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 0, T_NAME= DEFAULT TASK-19193 | CMD = ALTER SYSTEM KILL SESSION '2063,22939' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:42:03,668 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 601, T_NAME= DEFAULT TASK-19213 | CMD = ALTER SYSTEM KILL SESSION '2292,34396' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:42:03,669 | INFO | Total de sessões encerradas: 3
+
+2026-01-29 10:42:03,669 | INFO | Job automático finalizado

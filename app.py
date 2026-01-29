@@ -1,20 +1,58 @@
+from logging.handlers import RotatingFileHandler
+
 import pytz
 import logging
 from flask import Flask, render_template, redirect, url_for, request, jsonify
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
 from datetime import datetime
-
 from db import run_query, execute_command, get_connection
+import os
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+LOG_DIR = os.path.join(BASE_DIR, "logs")
+os.makedirs(LOG_DIR, exist_ok=True)
+
+APP_LOG_FILE = os.path.join(LOG_DIR, "oracle_kill_monitor.log")
+SESSIONS_LOG_FILE = os.path.join(LOG_DIR, "sessions_snapshot.log")
 
 # -------------------------------------------------------------------
 # LOGGING
 # -------------------------------------------------------------------
-logging.basicConfig(
-    level=logging.INFO,
-    format="%(asctime)s | %(levelname)s | %(message)s"
+logger = logging.getLogger("oracle_kill_monitor")
+logger.setLevel(logging.INFO)
+
+formatter = logging.Formatter(
+    "%(asctime)s | %(levelname)s | %(message)s"
 )
-logger = logging.getLogger(__name__)
+
+file_handler = RotatingFileHandler(
+    APP_LOG_FILE,
+    maxBytes=10 * 1024 * 1024,  # 10MB
+    backupCount=5,
+    encoding="utf-8"
+)
+
+file_handler.setFormatter(formatter)
+
+console_handler = logging.StreamHandler()
+console_handler.setFormatter(formatter)
+
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
+
+sessions_logger = logging.getLogger("sessions_snapshot")
+sessions_logger.setLevel(logging.INFO)
+
+sessions_handler = RotatingFileHandler(
+    SESSIONS_LOG_FILE,
+    maxBytes=50 * 1024 * 1024,  # 50MB
+    backupCount=10,
+    encoding="utf-8"
+)
+
+sessions_handler.setFormatter(logging.Formatter("%(message)s"))
+sessions_logger.addHandler(sessions_handler)
 
 # -------------------------------------------------------------------
 # APP
@@ -57,7 +95,24 @@ def monitor_sessions():
     try:
         cols, rows = run_query(QUERY)
         last_result = {"cols": cols, "rows": rows}
+
         logger.info(f"Sessões monitoradas: {len(rows)} ativas")
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        for r in rows:
+            row = dict(zip(cols, r))
+            sessions_logger.info(
+                f"{timestamp} | "
+                f"USER={row['USERNAME']} | "
+                f"SID={row['SID']} | "
+                f"SERIAL={row['SERIAL#']} | "
+                f"HORAS={row['HORAS']} | "
+                f"MINUTOS={row['MINUTOS']} | "
+                f"CLIENT={row['CLIENT_INFO']} | "
+                f"EVENT={row['EVENT']} | "
+                f"MACHINE={row['MACHINE']}"
+            )
+
     except Exception as e:
         logger.error(f"Erro ao executar monitor_sessions: {e}")
 
