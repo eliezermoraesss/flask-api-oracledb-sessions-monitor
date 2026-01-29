@@ -9,6 +9,8 @@
 
   <style>
     .log-window {
+      display: flex;
+      flex-direction: column-reverse;
       background-color: #0d1117;
       color: #c9d1d9;
       font-family: Consolas, Monaco, monospace;
@@ -26,9 +28,9 @@
   <div class="container mt-4">
 
     <div class="d-flex justify-content-between align-items-center mb-3">
-      <h3>📊 Session Snapshot</h3>
+      <h3>📊 Análise de Sessões</h3>
 
-      <a href="{{ url_for('index') }}" class="btn btn-secondary">
+      <a href="{{ url_for('logs') }}" class="btn btn-secondary">
         ⬅ Voltar
       </a>
     </div>

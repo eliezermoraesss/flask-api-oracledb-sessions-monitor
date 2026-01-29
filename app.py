@@ -28,8 +28,8 @@ formatter = logging.Formatter(
 
 file_handler = RotatingFileHandler(
     APP_LOG_FILE,
-    maxBytes=10 * 1024 * 1024,  # 10MB
-    backupCount=5,
+    maxBytes=100 * 1024 * 1024,  # 100MB
+    backupCount=2,
     encoding="utf-8"
 )
 
@@ -46,8 +46,8 @@ sessions_logger.setLevel(logging.INFO)
 
 sessions_handler = RotatingFileHandler(
     SESSIONS_LOG_FILE,
-    maxBytes=50 * 1024 * 1024,  # 50MB
-    backupCount=10,
+    maxBytes=100 * 1024 * 1024,  # 100MB
+    backupCount=2,
     encoding="utf-8"
 )
 
