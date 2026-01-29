@@ -146,9 +146,9 @@ def kill_sessions_automatic():
 
         if (username != "SYSTEM" and machine != "localhost"
                 and (horas >= 12
-                    or "LOCK" in event or "MUTEX" in event
-                    or not "SW.DEFAULT.SCHED" in client
-                    or not "CONSOLID" in client)):
+                    or "LOCK" in event or "MUTEX" in event)
+                and not ("SW.DEFAULT.SCHED" in client
+                    or "CONSOLID" in client)):
             cmd = r[kill_idx].strip().rstrip(";")
 
             try:
@@ -204,7 +204,7 @@ def kill_session(sid, serial):
 # JOB AGENDADO
 # -------------------------------------------------------------------
 def scheduled_kill_all():
-    logger.info("\nJob automático iniciado")
+    logger.info("Job automático iniciado")
     try:
         kill_sessions_automatic()
     except Exception as e:

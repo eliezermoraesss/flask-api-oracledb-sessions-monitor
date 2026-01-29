@@ -149,3 +149,205 @@ Help: https://docs.oracle.com/error-help/db/ora-00031/
 2026-01-29 10:42:03,669 | INFO | Total de sessões encerradas: 3
 
 2026-01-29 10:42:03,669 | INFO | Job automático finalizado
+2026-01-29 10:53:15,294 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-01-29 10:53:15,348 | INFO | Scheduler iniciado
+2026-01-29 10:53:18,688 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:53:21,644 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:53:22,352 | INFO | 
+Job automático iniciado
+2026-01-29 10:53:22,721 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:53:22,721 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 10:53:22,721 | INFO | Job automático finalizado
+2026-01-29 10:53:24,713 | INFO | Sessões monitoradas: 8 ativas
+2026-01-29 10:53:27,814 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 10:53:29,351 | INFO | 
+Job automático iniciado
+2026-01-29 10:53:29,771 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 0, T_NAME= SW.DEFAULT.SCHEDULER_WORKER-6 | CMD = ALTER SYSTEM KILL SESSION '2407,40507' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:53:30,058 | ERROR | Erro ao matar sessão SANKHYA: ORA-00026: missing or invalid session ID
+Help: https://docs.oracle.com/error-help/db/ora-00026/
+2026-01-29 10:53:30,415 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:53:30,436 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 10:53:30,436 | INFO | Job automático finalizado
+2026-01-29 10:53:30,738 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:53:33,666 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:53:36,352 | INFO | 
+Job automático iniciado
+2026-01-29 10:53:36,672 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 10:53:36,691 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:53:37,042 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:53:37,065 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 10:53:37,065 | INFO | Job automático finalizado
+2026-01-29 10:53:39,672 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:53:42,666 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 10:53:43,361 | INFO | 
+Job automático iniciado
+2026-01-29 10:53:43,667 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:53:44,006 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:53:44,311 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:53:44,655 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:53:44,683 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 10:53:44,683 | INFO | Job automático finalizado
+2026-01-29 10:53:45,655 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:53:48,695 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:53:50,357 | INFO | 
+Job automático iniciado
+2026-01-29 10:53:50,660 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:53:50,961 | ERROR | Erro ao matar sessão SANKHYA: ORA-00026: missing or invalid session ID
+Help: https://docs.oracle.com/error-help/db/ora-00026/
+2026-01-29 10:53:50,986 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 10:53:50,987 | INFO | Job automático finalizado
+2026-01-29 10:53:51,658 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:53:54,767 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:53:57,355 | INFO | 
+Job automático iniciado
+2026-01-29 10:53:57,669 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:53:57,771 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MORE DATA TO CLIENT | CLIENT = U= 628, T_NAME= CABECALHONOTA:DATAPAGER_5F1F412BB84D48FDBEF2F0AF | CMD = ALTER SYSTEM KILL SESSION '2180,37984' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:53:58,132 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 0, T_NAME= SW.DEFAULT.SCHEDULER_WORKER-2 | CMD = ALTER SYSTEM KILL SESSION '2401,25652' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:53:58,132 | INFO | Total de sessões encerradas: 2
+
+2026-01-29 10:53:58,132 | INFO | Job automático finalizado
+2026-01-29 10:54:00,716 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 10:54:03,710 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 10:54:04,365 | INFO | 
+Job automático iniciado
+2026-01-29 10:54:04,638 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:54:04,946 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:54:05,319 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:54:05,388 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 10:54:05,388 | INFO | Job automático finalizado
+2026-01-29 10:54:06,685 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 10:54:09,738 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:54:11,358 | INFO | 
+Job automático iniciado
+2026-01-29 10:54:11,687 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:54:12,065 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = DB FILE SEQUENTIAL READ | CLIENT = U= 613, T_NAME= DEFAULT TASK-19242 | CMD = ALTER SYSTEM KILL SESSION '2059,7002' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:54:12,065 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 10:54:12,065 | INFO | Job automático finalizado
+2026-01-29 10:54:12,719 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:54:15,644 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:54:18,349 | INFO | 
+Job automático iniciado
+2026-01-29 10:54:18,673 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:54:18,778 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE TO CLIENT | CLIENT = U= 613, T_NAME= DEFAULT TASK-19240 | CMD = ALTER SYSTEM KILL SESSION '1487,35238' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:54:19,057 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:54:19,057 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 10:54:19,057 | INFO | Job automático finalizado
+2026-01-29 10:54:21,709 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:54:24,752 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:54:25,359 | INFO | 
+Job automático iniciado
+2026-01-29 10:54:25,757 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:54:26,069 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:54:26,096 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 10:54:26,096 | INFO | Job automático finalizado
+2026-01-29 10:54:27,642 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 10:54:30,725 | INFO | Sessões monitoradas: 8 ativas
+2026-01-29 10:54:32,351 | INFO | 
+Job automático iniciado
+2026-01-29 10:54:32,860 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MORE DATA TO CLIENT | CLIENT = U= 601, T_NAME= DEFAULT TASK-19234 | CMD = ALTER SYSTEM KILL SESSION '459,38732' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:54:33,193 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:54:33,618 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MORE DATA TO CLIENT | CLIENT = U= 337, T_NAME= CABECALHONOTA:DATAPAGER_F52A503260B8379970EA4593 | CMD = ALTER SYSTEM KILL SESSION '2284,44240' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:54:34,001 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = SQL*NET MESSAGE FROM CLIENT | CLIENT = U= 0, T_NAME= SW.DEFAULT.SCHEDULER_WORKER-4 | CMD = ALTER SYSTEM KILL SESSION '1721,29558' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 10:54:34,335 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:54:34,640 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 10:54:34,949 | ERROR | Erro ao matar sessão SANKHYA: ORA-00030: User session ID does not exist.
+Help: https://docs.oracle.com/error-help/db/ora-00030/
+2026-01-29 10:54:34,980 | INFO | Total de sessões encerradas: 3
+
+2026-01-29 10:54:34,981 | INFO | Job automático finalizado
+2026-01-29 11:02:12,588 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-01-29 11:02:12,631 | INFO | Scheduler iniciado
+2026-01-29 11:02:16,160 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 11:02:19,040 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 11:02:19,633 | INFO | 
+Job automático iniciado
+2026-01-29 11:02:20,033 | ERROR | Erro ao matar sessão SYS: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 11:02:20,034 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 11:02:20,034 | INFO | Job automático finalizado
+2026-01-29 11:02:21,968 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 11:02:25,065 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 11:02:26,644 | INFO | 
+Job automático iniciado
+2026-01-29 11:02:26,644 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 11:02:26,644 | INFO | Job automático finalizado
+2026-01-29 11:02:28,002 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 11:02:31,072 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 11:02:33,637 | INFO | 
+Job automático iniciado
+2026-01-29 11:02:33,637 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 11:02:33,637 | INFO | Job automático finalizado
+2026-01-29 11:02:33,990 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 11:02:36,925 | INFO | Sessões monitoradas: 1 ativas
+2026-01-29 11:02:39,952 | INFO | Sessões monitoradas: 1 ativas
+2026-01-29 11:02:40,645 | INFO | 
+Job automático iniciado
+2026-01-29 11:02:40,645 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 11:02:40,645 | INFO | Job automático finalizado
+2026-01-29 11:02:43,014 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 11:02:46,009 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 11:02:47,632 | INFO | 
+Job automático iniciado
+2026-01-29 11:02:47,632 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 11:02:47,632 | INFO | Job automático finalizado
+2026-01-29 11:02:49,020 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 11:02:52,019 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 11:02:54,640 | INFO | 
+Job automático iniciado
+2026-01-29 11:02:54,640 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 11:02:54,640 | INFO | Job automático finalizado
+2026-01-29 11:02:55,100 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 11:02:57,955 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 11:03:00,990 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 11:03:01,643 | INFO | 
+Job automático iniciado
+2026-01-29 11:03:01,643 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 11:03:01,643 | INFO | Job automático finalizado
+2026-01-29 11:03:04,088 | INFO | Sessões monitoradas: 2 ativas
