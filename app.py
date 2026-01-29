@@ -77,24 +77,35 @@ def kill_sessions_automatic():
     user_idx = cols.index("USERNAME")
     horas_idx = cols.index("HORAS")
     event_idx = cols.index("EVENT")
+    client_idx = cols.index("CLIENT_INFO")
+    machine_idx = cols.index("MACHINE")
 
     killed_count = 0
 
     for r in rows:
         username = str(r[user_idx]).upper()
         horas = int(r[horas_idx])
-        event = str(r[event_idx]).lower()
+        event = str(r[event_idx]).upper()
+        client = str(r[client_idx]).upper()
+        machine = str(r[machine_idx]).upper()
 
-        if username != "SYSTEM" and (horas >= 12 or "lock" in event or "mutex" in event):
+        if (username != "SYSTEM" and machine != "localhost"
+                and (horas >= 12
+                    or "LOCK" in event or "MUTEX" in event
+                    or not "SW.DEFAULT.SCHED" in client
+                    or not "CONSOLID" in client)):
             cmd = r[kill_idx].strip().rstrip(";")
+
             try:
                 execute_command(cmd)
                 killed_count += 1
-                logger.info(f"Sessão encerrada: USER={username} | HORAS={horas}")
+                logger.info(f"Sessão encerrada: "
+                            f"USER={username} | HORAS={horas} | "
+                            f"EVENT={event} | CLIENT={client} | CMD={cmd}")
             except Exception as e:
                 logger.error(f"Erro ao matar sessão {username}: {e}")
 
-    logger.info(f"Total de sessões encerradas: {killed_count}")
+    logger.info(f"Total de sessões encerradas: {killed_count}\n")
     return killed_count
 
 # -------------------------------------------------------------------
@@ -138,7 +149,7 @@ def kill_session(sid, serial):
 # JOB AGENDADO
 # -------------------------------------------------------------------
 def scheduled_kill_all():
-    logger.info("Job automático iniciado")
+    logger.info("\nJob automático iniciado")
     try:
         kill_sessions_automatic()
     except Exception as e:
