@@ -2181,3 +2181,42 @@
 2026-01-29 14:16:28 | USER=SANKHYA | SID=2516 | SERIAL=23030 | HORAS=0 | MINUTOS=0 | CLIENT=u= 167, t_name= default task-19557 | EVENT=SQL*Net message to client | MACHINE=localhost
 2026-01-29 14:16:28 | USER=SANKHYA | SID=1609 | SERIAL=28094 | HORAS=0 | MINUTOS=0 | CLIENT=u= 600, t_name= default task-19589 | EVENT=SQL*Net message from client | MACHINE=localhost
 2026-01-29 14:16:28 | USER=SYSTEM | SID=1144 | SERIAL=39368 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:01 | USER=SANKHYA | SID=459 | SERIAL=21813 | HORAS=0 | MINUTOS=53 | CLIENT=u= 559, t_name= default task-19866 | EVENT=latch: cache buffers chains | MACHINE=localhost
+2026-01-29 17:33:01 | USER=SANKHYA | SID=2404 | SERIAL=23984 | HORAS=0 | MINUTOS=5 | CLIENT=u= 78, t_name= default task-19965 | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:01 | USER=SANKHYA | SID=1602 | SERIAL=6874 | HORAS=0 | MINUTOS=0 | CLIENT=u= 0, t_name= sw.mge.scheduler.adapter_Worker-7 | EVENT=direct path read | MACHINE=localhost
+2026-01-29 17:33:01 | USER=SYSTEM | SID=241 | SERIAL=64998 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:04 | USER=SANKHYA | SID=459 | SERIAL=21813 | HORAS=0 | MINUTOS=53 | CLIENT=u= 559, t_name= default task-19866 | EVENT=latch: cache buffers chains | MACHINE=localhost
+2026-01-29 17:33:04 | USER=SANKHYA | SID=1727 | SERIAL=57183 | HORAS=0 | MINUTOS=0 | CLIENT=u= 549, t_name= CabecalhoNota:DataPager_C7BC49C05384D386DA632371 | EVENT=SQL*Net more data to client | MACHINE=localhost
+2026-01-29 17:33:04 | USER=SANKHYA | SID=2404 | SERIAL=23984 | HORAS=0 | MINUTOS=5 | CLIENT=u= 78, t_name= default task-19965 | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:04 | USER=SANKHYA | SID=345 | SERIAL=61408 | HORAS=0 | MINUTOS=0 | CLIENT=u= 346, t_name= Separacao:DataPager_3D95918D0B0BA7F17CD51B7FBF0E | EVENT=SQL*Net message to client | MACHINE=localhost
+2026-01-29 17:33:04 | USER=SANKHYA | SID=2527 | SERIAL=57506 | HORAS=0 | MINUTOS=0 | CLIENT=u= 139, t_name= default task-19955 | EVENT=SQL*Net more data from client | MACHINE=localhost
+2026-01-29 17:33:04 | USER=SYSTEM | SID=241 | SERIAL=46902 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:07 | USER=SANKHYA | SID=2404 | SERIAL=23984 | HORAS=0 | MINUTOS=5 | CLIENT=u= 78, t_name= default task-19965 | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:07 | USER=SANKHYA | SID=692 | SERIAL=63095 | HORAS=0 | MINUTOS=0 | CLIENT=u= 635, t_name= Financeiro:DataPager_682A9DAEF12E23C037B9DA0D54E | EVENT=SQL*Net more data to client | MACHINE=localhost
+2026-01-29 17:33:07 | USER=SYSTEM | SID=2522 | SERIAL=33072 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:10 | USER=SANKHYA | SID=813 | SERIAL=6831 | HORAS=0 | MINUTOS=0 | CLIENT=u= 124, t_name= default task-19980 | EVENT=SQL*Net more data from client | MACHINE=localhost
+2026-01-29 17:33:10 | USER=SANKHYA | SID=2404 | SERIAL=23984 | HORAS=0 | MINUTOS=5 | CLIENT=u= 78, t_name= default task-19965 | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:10 | USER=SANKHYA | SID=1602 | SERIAL=6874 | HORAS=0 | MINUTOS=0 | CLIENT=u= 270, t_name= default task-19947 | EVENT=TCP Socket (KGAS) | MACHINE=localhost
+2026-01-29 17:33:10 | USER=SANKHYA | SID=2 | SERIAL=4408 | HORAS=0 | MINUTOS=0 | CLIENT=u= 474, t_name= default task-19975 | EVENT=row cache mutex | MACHINE=localhost
+2026-01-29 17:33:10 | USER=SYSTEM | SID=2522 | SERIAL=42912 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:13 | USER=SANKHYA | SID=813 | SERIAL=6831 | HORAS=0 | MINUTOS=0 | CLIENT=u= 124, t_name= default task-19980 | EVENT=SQL*Net message from client | MACHINE=localhost
+2026-01-29 17:33:13 | USER=SANKHYA | SID=2404 | SERIAL=23984 | HORAS=0 | MINUTOS=5 | CLIENT=u= 78, t_name= default task-19965 | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:13 | USER=SANKHYA | SID=1602 | SERIAL=6874 | HORAS=0 | MINUTOS=0 | CLIENT=u= 270, t_name= default task-19947 | EVENT=TCP Socket (KGAS) | MACHINE=localhost
+2026-01-29 17:33:13 | USER=SANKHYA | SID=231 | SERIAL=53984 | HORAS=0 | MINUTOS=0 | CLIENT=u= 546, t_name= default task-19952 | EVENT=SQL*Net more data from client | MACHINE=localhost
+2026-01-29 17:33:13 | USER=SANKHYA | SID=2407 | SERIAL=40047 | HORAS=0 | MINUTOS=0 | CLIENT=u= 74, t_name= default task-19977 | EVENT=SQL*Net message to client | MACHINE=localhost
+2026-01-29 17:33:13 | USER=SYSTEM | SID=233 | SERIAL=58993 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:16 | USER=SANKHYA | SID=2404 | SERIAL=23984 | HORAS=0 | MINUTOS=5 | CLIENT=u= 78, t_name= default task-19965 | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:16 | USER=SYSTEM | SID=233 | SERIAL=31781 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:19 | USER=SANKHYA | SID=2404 | SERIAL=23984 | HORAS=0 | MINUTOS=5 | CLIENT=u= 78, t_name= default task-19965 | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:19 | USER=SANKHYA | SID=231 | SERIAL=53984 | HORAS=0 | MINUTOS=0 | CLIENT=u= 112, t_name= default task-19978 | EVENT=TCP Socket (KGAS) | MACHINE=localhost
+2026-01-29 17:33:19 | USER=SANKHYA | SID=2059 | SERIAL=22245 | HORAS=0 | MINUTOS=0 | CLIENT=u= 124, t_name= default task-19977 | EVENT=SQL*Net message to client | MACHINE=localhost
+2026-01-29 17:33:19 | USER=SYSTEM | SID=241 | SERIAL=12531 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:22 | USER=SANKHYA | SID=231 | SERIAL=53984 | HORAS=0 | MINUTOS=0 | CLIENT=u= 546, t_name= default task-19965 | EVENT=SQL*Net more data from client | MACHINE=localhost
+2026-01-29 17:33:22 | USER=SYSTEM | SID=1372 | SERIAL=5599 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:25 | USER=SYSTEM | SID=1372 | SERIAL=1136 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:28 | USER=SANKHYA | SID=1727 | SERIAL=57183 | HORAS=0 | MINUTOS=0 | CLIENT=u= 407, t_name= CabecalhoNota:DataPager_624AFBE74C126DCE6DAFEDEB | EVENT=db file sequential read | MACHINE=localhost
+2026-01-29 17:33:28 | USER=SYSTEM | SID=1603 | SERIAL=63504 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:31 | USER=SANKHYA | SID=1487 | SERIAL=45347 | HORAS=0 | MINUTOS=0 | CLIENT=u= 0, t_name= ServicoSistemaPersister | EVENT=SQL*Net message from client | MACHINE=localhost
+2026-01-29 17:33:31 | USER=SYSTEM | SID=1372 | SERIAL=38588 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264
+2026-01-29 17:33:34 | USER=SANKHYA | SID=2407 | SERIAL=40047 | HORAS=0 | MINUTOS=0 | CLIENT=u= 589, t_name= default task-19952 | EVENT=SQL*Net more data from client | MACHINE=localhost
+2026-01-29 17:33:34 | USER=SYSTEM | SID=1372 | SERIAL=8554 | HORAS=0 | MINUTOS=0 | CLIENT=None | EVENT=SQL*Net message to client | MACHINE=M264

@@ -1715,3 +1715,41 @@ Help: https://docs.oracle.com/error-help/db/ora-00031/
 2026-01-29 14:16:25,586 | INFO | Job automático finalizado
 2026-01-29 14:16:25,880 | INFO | Sessões monitoradas: 4 ativas
 2026-01-29 14:16:28,923 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 17:32:57,758 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-01-29 17:32:57,901 | INFO | Scheduler iniciado
+2026-01-29 17:33:01,282 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 17:33:04,210 | INFO | Sessões monitoradas: 6 ativas
+2026-01-29 17:33:04,901 | INFO | Job automático iniciado
+2026-01-29 17:33:05,224 | ERROR | Erro ao matar sessão SANKHYA: DPY-4011: the database or network closed the connection
+ORA-00031: session marked for kill
+Help: https://docs.oracle.com/error-help/db/ora-00031/
+2026-01-29 17:33:05,225 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 17:33:05,225 | INFO | Job automático finalizado
+2026-01-29 17:33:07,179 | INFO | Sessões monitoradas: 3 ativas
+2026-01-29 17:33:10,295 | INFO | Sessões monitoradas: 5 ativas
+2026-01-29 17:33:11,907 | INFO | Job automático iniciado
+2026-01-29 17:33:12,319 | INFO | Sessão encerrada: USER = SANKHYA | HORAS = 0 | EVENT = ROW CACHE MUTEX | CLIENT = U= 474, T_NAME= DEFAULT TASK-19975 | CMD = ALTER SYSTEM KILL SESSION '2,4408' IMMEDIATE | MACHINE = LOCALHOST
+2026-01-29 17:33:12,319 | INFO | Total de sessões encerradas: 1
+
+2026-01-29 17:33:12,319 | INFO | Job automático finalizado
+2026-01-29 17:33:13,191 | INFO | Sessões monitoradas: 6 ativas
+2026-01-29 17:33:16,214 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 17:33:18,910 | INFO | Job automático iniciado
+2026-01-29 17:33:18,910 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 17:33:18,910 | INFO | Job automático finalizado
+2026-01-29 17:33:19,247 | INFO | Sessões monitoradas: 4 ativas
+2026-01-29 17:33:22,227 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 17:33:25,243 | INFO | Sessões monitoradas: 1 ativas
+2026-01-29 17:33:25,901 | INFO | Job automático iniciado
+2026-01-29 17:33:25,902 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 17:33:25,902 | INFO | Job automático finalizado
+2026-01-29 17:33:28,258 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 17:33:31,226 | INFO | Sessões monitoradas: 2 ativas
+2026-01-29 17:33:32,909 | INFO | Job automático iniciado
+2026-01-29 17:33:32,909 | INFO | Total de sessões encerradas: 0
+
+2026-01-29 17:33:32,909 | INFO | Job automático finalizado
+2026-01-29 17:33:34,254 | INFO | Sessões monitoradas: 2 ativas

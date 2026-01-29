@@ -158,6 +158,7 @@ def kill_sessions_automatic():
 
         if (username != "SYSTEM" and machine != "localhost"
                 and (horas >= 12
+                    or "LATCH: CACHE BUFFERS CHAINS" in event
                     or "LOCK" in event or "MUTEX" in event)
                 and not ("SW.DEFAULT.SCHED" in client
                     or "CONSOLID" in client)):
