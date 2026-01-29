@@ -100,8 +100,8 @@ def kill_sessions_automatic():
                 execute_command(cmd)
                 killed_count += 1
                 logger.info(f"Sessão encerrada: "
-                            f"USER={username} | HORAS={horas} | "
-                            f"EVENT={event} | CLIENT={client} | CMD={cmd}")
+                            f"USER = {username} | HORAS = {horas} | "
+                            f"EVENT = {event} | CLIENT = {client} | CMD = {cmd} | MACHINE = {machine}")
             except Exception as e:
                 logger.error(f"Erro ao matar sessão {username}: {e}")
 
