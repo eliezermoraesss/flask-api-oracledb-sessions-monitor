@@ -8,6 +8,8 @@
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
+![Demonstração3](assets/images/oracle-kill-session-03.gif)
+![Demonstração4](assets/images/oracle-kill-session-04.gif)
 ![Demonstração1](assets/images/oracle-kill-session-01.gif)
 ![Demonstração2](assets/images/oracle-kill-session-02.gif)
 
@@ -23,36 +25,90 @@ A ferramenta exibe todas as sessões de usuários conectados, mostrando informa�
 É ideal para **DBAs e equipes de suporte** que precisam visualizar e controlar sessões em tempo real sem depender de scripts SQL manuais.
 
 ---
-
 ## ⚙️ Funcionalidades Principais
-
-✅ Monitoramento em tempo real das sessões ativas no Oracle  
-✅ Ação manual para matar uma sessão específica  
-✅ Ação global para matar todas as sessões  
-✅ **Encerramento automático de sessões com eventos contendo 'lock'**  
-✅ Atualização automática da tela (refresh a cada 3 segundos)  
-✅ Auto Kill automático ao atingir 20 sessões ativas  
-✅ Visualização amigável com **Bootstrap 5.3**  
-✅ Separação de camadas entre aplicação Flask e camada de banco de dados (`db.py`)  
-
+✅ Monitoramento contín_*uo de sessões Oracle  
+✅ Interface web para observabilidade em tempo real  
+✅ Kill manual de sessões individuais (com proteções)  
+✅ Kill automático baseado em regras técnicas  
+✅ Proteção explícita para usuários SYS e SYSTEM  
+✅ Proteção por MACHINE e CLIENT_INFO  
+✅ Scheduler com regras por dia e horário  
+✅ Logs técnicos detalhados para auditoria  
+✅ Snapshot periódico das sessões para análise histórica  
+✅ Rotação automática de logs (100MB)  
+✅ Páginas dedicadas para visualização de logs no browser 
 ---
 
+
+## 🧠 Regras Técnicas de Kill
+
+Uma sessão **somente é encerrada automaticamente** se **TODAS** as condições abaixo forem atendidas:
+
+- Usuário **≠ SYSTEM / SYS**
+- MACHINE = `localhost`
+- Não pertence a processos críticos (ex: backup, scheduler)
+- Atende a pelo menos uma condição:
+  - Tempo ativo ≥ 12 horas
+  - Eventos contendo:
+    - `LOCK`
+    - `MUTEX`
+    - `CPU QUANTUM`
+    - `CACHE BUFFERS CHAINS`
+
+---
+## ⏰ Agendamentos (Scheduler)
+
+### 🔄 Monitoramento de Sessões
+- Executa a cada **4 segundos**
+- Registra snapshot completo das sessões em log
+
+### 🚨 Kill Automático
+Executa apenas nos horários abaixo:
+
+| Dia | Horário |
+|----|--------|
+| Segunda a Quinta | 08:00 às 18:00 |
+| Sexta | 08:00 às 17:00 |
+| Sábado | 08:00 às 12:00 |
+| Domingo | ❌ Não executa |
+
+---
 ## 🧩 Estrutura do Projeto
 
 ```
 OracleKillSessionsMonitor/
 │
-├── app.py                  # Aplicação Flask principal
-├── db.py                   # Módulo para conexão e execução de queries Oracle
-├── requirements.txt        # Dependências do projeto
-├── .env                    # Variáveis de ambiente (usuário, senha, host, etc)
-├── .venv/                  # Ambiente virtual Python
+├── app.py
+├── db.py
+├── requirements.txt
+├── logs/
+│   ├── oracle_kill_monitor.log
+│   └── sessions_snapshot.log
 │
 ├── templates/
-│   └── index.html          # Interface web responsiva
+│   ├── index.html
+│   ├── logs.html
+│   └── sessions_logs.html
 │
-└── README.md               # Este arquivo
+├── static/
+│   └── M.ico
+│
+└── README.md
 ```
+
+---
+## 📜 Logs & Auditoria
+
+### 🔹 oracle_kill_monitor.log
+- Execução dos jobs
+- Sessões encerradas
+- Erros e exceções
+- Auditoria técnica
+
+### 🔹 sessions_snapshot.log
+- Snapshot contínuo das sessões
+- Timestamp, SID, USER, EVENT, MACHINE
+- Base para análise forense e capacity planning
 
 ---
 
@@ -164,15 +220,6 @@ order by TYPE,logon_time
 
 ---
 
-## 🧑‍💻 Autor
-
-**Eliezer Moraes**  
-Desenvolvedor de Software & Analista de Sistemas  
-
-[![GitHub](https://img.shields.io/badge/GitHub-EliezerMoraes-black?logo=github)](https://github.com/eliezermoraes)  
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-EliezerMoraes-blue?logo=linkedin)](https://www.linkedin.com/in/eliezermoraes)
----
-
 ## 📜 Licença
 
 Este projeto está licenciado sob a **MIT License** – veja o arquivo [LICENSE](LICENSE) para mais detalhes.
@@ -181,12 +228,20 @@ Este projeto está licenciado sob a **MIT License** – veja o arquivo [LICENSE]
 
 ## 🧩 Próximos Passos (Roadmap)
 
-- [ ] Adicionar filtro de sessões por usuário  
-- [ ] Implementar gráficos de consumo de recursos  
-- [ ] Adicionar logs e auditoria das sessões mortas  
 - [ ] Notificações automáticas via e-mail ou Telegram  
 - [ ] Containerização com Docker  
 
 ---
 
-⭐ Se este projeto te ajudou, **deixa uma estrela no repositório**!
+⭐ Projeto desenvolvido para uso **real em produção**, com foco em **confiabilidade, controle e observabilidade**.
+
+---
+
+## 🧑‍💻 Autor
+
+**Eliezer Moraes**  
+Desenvolvedor de Software & Analista de Sistemas  
+
+[![GitHub](https://img.shields.io/badge/GitHub-EliezerMoraes-black?logo=github)](https://github.com/eliezermoraes)  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-EliezerMoraes-blue?logo=linkedin)](https://www.linkedin.com/in/eliezermoraes)
+---
