@@ -2,6 +2,8 @@ from logging.handlers import RotatingFileHandler
 
 import pytz
 import logging
+
+from apscheduler.triggers.cron import CronTrigger
 from flask import Flask, render_template, redirect, url_for, request, jsonify
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.interval import IntervalTrigger
@@ -108,7 +110,7 @@ def monitor_sessions():
         cols, rows = run_query(QUERY)
         last_result = {"cols": cols, "rows": rows}
 
-        logger.info(f"Sessões monitoradas: {len(rows)} ativas")
+        logger.info(f"Sessões monitoradas: {len(rows)} ativas\n")
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 
         for r in rows:
@@ -156,12 +158,18 @@ def kill_sessions_automatic():
         client = str(r[client_idx]).upper()
         machine = str(r[machine_idx]).upper()
 
-        if (username != "SYSTEM" and machine != "localhost"
-                and (horas >= 12
-                    or "LATCH: CACHE BUFFERS CHAINS" in event
-                    or "LOCK" in event or "MUTEX" in event)
-                and not ("SW.DEFAULT.SCHED" in client
-                    or "CONSOLID" in client)):
+        if (username != "SYSTEM"
+            and username != "SYS"
+            and machine != "SERVERBD"
+            and machine == "localhost"
+            and (horas >= 12
+                or "CACHE BUFFERS CHAINS" in event
+                or "CPU QUANTUM" in event
+                or "LIBRARY CACHE LOCK" in event
+                or "ROW CACHE MUTEX" in event)
+            and not "SW.DEFAULT.SCHED" in client
+            and not "CONSOLID" in client):
+
             cmd = r[kill_idx].strip().rstrip(";")
 
             try:
@@ -173,7 +181,7 @@ def kill_sessions_automatic():
             except Exception as e:
                 logger.error(f"Erro ao matar sessão {username}: {e}")
 
-    logger.info(f"Total de sessões encerradas: {killed_count}\n")
+    logger.info(f"Total de sessões encerradas: {killed_count}")
     return killed_count
 
 # -------------------------------------------------------------------
@@ -181,6 +189,7 @@ def kill_sessions_automatic():
 # -------------------------------------------------------------------
 @app.route("/")
 def index():
+    monitor_sessions()
     return render_template("index.html", data=last_result)
 
 # -------------------------------------------------------------------
@@ -251,6 +260,13 @@ def kill_session(sid, serial):
         logger.error(f"Erro no kill individual SID={sid}: {e}")
         return jsonify({"error": str(e)}), 500
 
+@app.after_request
+def set_cache_headers(response):
+    response.headers['Cache-Control'] = 'no-store, no-cache, must-revalidate, max-age=0'
+    response.headers['Pragma'] = 'no-cache'
+    response.headers['Expires'] = '0'
+    return response
+
 # -------------------------------------------------------------------
 # JOB AGENDADO
 # -------------------------------------------------------------------
@@ -260,19 +276,107 @@ def scheduled_kill_all():
         kill_sessions_automatic()
     except Exception as e:
         logger.error(f"Erro no job automático: {e}")
-    logger.info("Job automático finalizado")
+    logger.info("Job automático finalizado\n")
 
 # -------------------------------------------------------------------
 # MAIN
 # -------------------------------------------------------------------
 if __name__ == "__main__":
+    TIME_JOB_MONITOR = "0,03"  # 3 segundos
+    TIME_JOB_KILL = "0,15"  # 15 segundos
     logger.info("Iniciando Oracle Kill Sessions Monitor")
 
     america_sp = pytz.timezone("America/Sao_Paulo")
-    scheduler = BackgroundScheduler(timezone=america_sp)
+    scheduler = BackgroundScheduler(timezone=america_sp, job_defaults={
+        "coalesce": True,
+        "max_instances": 1
+    })
 
-    scheduler.add_job(monitor_sessions, IntervalTrigger(seconds=3))
-    scheduler.add_job(scheduled_kill_all, IntervalTrigger(seconds=7))
+    # -----------------------------
+    # MONITORAMENTO DE SESSÕES
+    # -----------------------------
+
+    # Segunda a quinta: 08h às 18h
+    scheduler.add_job(
+        monitor_sessions,
+        CronTrigger(
+            day_of_week="mon-thu",
+            hour="8-17",
+            minute="*",
+            second=TIME_JOB_MONITOR
+        ),
+        id="monitor_sessions_mon_thu",
+        replace_existing=True
+    )
+
+    # Sexta: 08h às 17h
+    scheduler.add_job(
+        monitor_sessions,
+        CronTrigger(
+            day_of_week="fri",
+            hour="8-16",
+            minute="*",
+            second=TIME_JOB_MONITOR
+        ),
+        id="monitor_sessions_fri",
+        replace_existing=True
+    )
+
+    # Sábado: 08h às 12h
+    scheduler.add_job(
+        monitor_sessions,
+        CronTrigger(
+            day_of_week="sat",
+            hour="8-11",
+            minute="*",
+            second=TIME_JOB_MONITOR
+        ),
+        id="monitor_sessions_sat",
+        replace_existing=True
+    )
+
+    # -----------------------------
+    # KILL AUTOMÁTICO
+    # -----------------------------
+
+    # Segunda a quinta
+    scheduler.add_job(
+        scheduled_kill_all,
+        CronTrigger(
+            day_of_week="mon-thu",
+            hour="8-17",
+            minute="*",
+            second=TIME_JOB_KILL
+        ),
+        id="kill_sessions_mon_thu",
+        replace_existing=True
+    )
+
+    # Sexta
+    scheduler.add_job(
+        scheduled_kill_all,
+        CronTrigger(
+            day_of_week="fri",
+            hour="8-16",
+            minute="*",
+            second=TIME_JOB_KILL
+        ),
+        id="kill_sessions_fri",
+        replace_existing=True
+    )
+
+    # Sábado
+    scheduler.add_job(
+        scheduled_kill_all,
+        CronTrigger(
+            day_of_week="sat",
+            hour="8-11",
+            minute="*",
+            second=TIME_JOB_KILL
+        ),
+        id="kill_sessions_sat",
+        replace_existing=True
+    )
 
     scheduler.start()
     logger.info("Scheduler iniciado")
