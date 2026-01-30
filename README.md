@@ -9,7 +9,6 @@
 
 ---
 ![Demonstração3](assets/images/oracle-kill-session-03.gif)
-![Demonstração4](assets/images/oracle-kill-session-04.gif)
 ![Demonstração1](assets/images/oracle-kill-session-01.gif)
 ![Demonstração2](assets/images/oracle-kill-session-02.gif)
 
