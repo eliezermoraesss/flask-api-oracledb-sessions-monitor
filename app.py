@@ -1,15 +1,14 @@
+import logging
+import os
+from datetime import datetime
 from logging.handlers import RotatingFileHandler
 
 import pytz
-import logging
-
+from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
 from flask import Flask, render_template, redirect, url_for, request, jsonify
-from apscheduler.schedulers.background import BackgroundScheduler
-from apscheduler.triggers.interval import IntervalTrigger
-from datetime import datetime
+
 from db import run_query, execute_command, get_connection
-import os
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 LOG_DIR = os.path.join(BASE_DIR, "logs")
@@ -166,6 +165,7 @@ def kill_sessions_automatic():
                 or "CACHE BUFFERS CHAINS" in event
                 or "CPU QUANTUM" in event
                 or "LIBRARY CACHE LOCK" in event
+                 or "ROW LOCK CONTENTION" in event
                 or "ROW CACHE MUTEX" in event)
             and not "SW.DEFAULT.SCHED" in client
             and not "CONSOLID" in client):
