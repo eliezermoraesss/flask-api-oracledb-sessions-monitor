@@ -162,10 +162,10 @@ def kill_sessions_automatic():
             and machine != "SERVERBD"
             and machine == "LOCALHOST"
             and (horas >= 12
-                or "CACHE BUFFERS CHAINS" in event
+                # or "CACHE BUFFERS CHAINS" in event (removido pela MatrizAnaliseGiro)
                 or "CPU QUANTUM" in event
                 or "LIBRARY CACHE LOCK" in event
-                or "ROW LOCK CONTENTION" in event
+                # or "ROW LOCK CONTENTION" in event
                 or "ROW CACHE MUTEX" in event)
             and not "SW.DEFAULT.SCHED" in client
             and not "CONSOLID" in client):
