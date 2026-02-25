@@ -166,7 +166,8 @@ def kill_sessions_automatic():
                 or "CPU QUANTUM" in event
                 or "LIBRARY CACHE LOCK" in event
                 # or "ROW LOCK CONTENTION" in event
-                or "ROW CACHE MUTEX" in event)
+                # or "ROW CACHE MUTEX" in event
+                )
             and not "SW.DEFAULT.SCHED" in client
             and not "CONSOLID" in client):
 
