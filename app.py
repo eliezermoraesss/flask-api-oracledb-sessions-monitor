@@ -76,18 +76,19 @@ QUERY = """
 select 'ALTER SYSTEM KILL SESSION '|| ''''||s.sid||','||s.serial#||'''' ||' IMMEDIATE' AS KILL,
        trunc(s.last_call_et/3600) horas,
        trunc(s.last_call_et/60) minutos,
-       s.sid,
-       s.serial#,
+       round(p.pga_used_mem / 1024 / 1024, 2) AS pga_used_mb,
        s.username,
        s.machine,
-       p.spid,
        s.osuser,
        s.client_info,
        s.EVENT,
        to_char(s.LOGON_TIME,'dd/mm/yyyy hh24:mi:ss') LOGON_TIME,
-       sysdate HORA_ATUAL,
-       s.program,
-       s.machine
+       round(p.pga_alloc_mem / 1024 / 1024, 2) AS pga_alloc_mb,
+       round(p.pga_max_mem / 1024 / 1024, 2) AS pga_max_mb,
+       s.sid,
+       s.serial#,
+       p.spid,
+       s.program
 from gv$session s, gv$process p
 WHERE s.paddr = p.addr
   and s.inst_id = p.inst_id
@@ -123,7 +124,10 @@ def monitor_sessions():
                 f"MINUTOS={row['MINUTOS']} | "
                 f"CLIENT={row['CLIENT_INFO']} | "
                 f"EVENT={row['EVENT']} | "
-                f"MACHINE={row['MACHINE']}"
+                f"MACHINE={row['MACHINE']} | "
+                f"PGA_USED_MB={row['PGA_USED_MB']} | "
+                f"PGA_ALLOC_MB={row['PGA_ALLOC_MB']} | "
+                f"PGA_MAX_MB={row['PGA_MAX_MB']}"
             )
 
     except Exception as e:
@@ -144,29 +148,34 @@ def kill_sessions_automatic():
     kill_idx = cols.index("KILL")
     user_idx = cols.index("USERNAME")
     horas_idx = cols.index("HORAS")
+    minutos_idx = cols.index("MINUTOS")
     event_idx = cols.index("EVENT")
     client_idx = cols.index("CLIENT_INFO")
     machine_idx = cols.index("MACHINE")
+    pga_used_idx = cols.index("PGA_USED_MB")
 
     killed_count = 0
 
     for r in rows:
         username = str(r[user_idx]).upper()
         horas = int(r[horas_idx])
+        minutos = int(r[minutos_idx])
         event = str(r[event_idx]).upper()
         client = str(r[client_idx]).upper()
         machine = str(r[machine_idx]).upper()
+        used_memory = float(r[pga_used_idx])
 
         if (username != "SYSTEM"
             and username != "SYS"
             and machine != "SERVERBD"
             and machine == "LOCALHOST"
+            and used_memory >= 4000
             and (horas >= 12
-                # or "CACHE BUFFERS CHAINS" in event (removido pela MatrizAnaliseGiro)
+                or ("LATCH: CACHE BUFFERS CHAINS" in event and minutos >= 30)
                 or "CPU QUANTUM" in event
                 or "LIBRARY CACHE LOCK" in event
                 # or "ROW LOCK CONTENTION" in event
-                # or "ROW CACHE MUTEX" in event
+                or ("ROW CACHE MUTEX" in event and used_memory >= 4000)
                 )
             and not "SW.DEFAULT.SCHED" in client
             and not "CONSOLID" in client):
@@ -177,8 +186,9 @@ def kill_sessions_automatic():
                 execute_command(cmd)
                 killed_count += 1
                 logger.info(f"Sessão encerrada: "
-                            f"USER = {username} | HORAS = {horas} | "
-                            f"EVENT = {event} | CLIENT = {client} | CMD = {cmd} | MACHINE = {machine}")
+                            f"USER = {username} | HORAS = {horas} | MINUTOS = {minutos} | "
+                            f"EVENT = {event} | CLIENT = {client} | CMD = {cmd} | MACHINE = {machine}"
+                            f" | PGA_USED_MB = {used_memory}")
             except Exception as e:
                 logger.error(f"Erro ao matar sessão {username}: {e}")
 
