@@ -169,16 +169,15 @@ def kill_sessions_automatic():
             and username != "SYS"
             and machine != "SERVERBD"
             and machine == "LOCALHOST"
-            and used_memory >= 4000
             and (horas >= 12
+                or used_memory >= 4000
                 or ("LATCH: CACHE BUFFERS CHAINS" in event and minutos >= 30)
-                or "CPU QUANTUM" in event
-                or "LIBRARY CACHE LOCK" in event
-                # or "ROW LOCK CONTENTION" in event
+                or ("ROW LOCK CONTENTION" in event and minutos >= 30)
+                or ("CPU QUANTUM" in event and minutos >= 30)
+                or ("LIBRARY CACHE LOCK" in event and minutos >= 30)
                 or ("ROW CACHE MUTEX" in event and used_memory >= 4000)
                 )
-            and not "SW.DEFAULT.SCHED" in client
-            and not "CONSOLID" in client):
+             ):
 
             cmd = r[kill_idx].strip().rstrip(";")
 
