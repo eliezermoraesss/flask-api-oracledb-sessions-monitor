@@ -177,7 +177,8 @@ def kill_sessions_automatic():
                 or ("LIBRARY CACHE LOCK" in event and minutos >= 30)
                 or ("ROW CACHE MUTEX" in event and used_memory >= 4000)
                 )
-             ):
+            and not "SW.DEFAULT.SCHEDULER" in client
+            and not "SW.CONSOLIDADOR" in client):
 
             cmd = r[kill_idx].strip().rstrip(";")
 
