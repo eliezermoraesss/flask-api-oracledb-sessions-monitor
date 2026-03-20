@@ -137,10 +137,7 @@ def monitor_sessions():
 # KILL ALL AUTOMÁTICO
 # -------------------------------------------------------------------
 def kill_sessions_automatic():
-    global last_result
-
-    if not last_result["rows"]:
-        monitor_sessions()
+    monitor_sessions()
 
     cols = last_result["cols"]
     rows = last_result["rows"]
@@ -247,7 +244,7 @@ def sessions_snapshot():
 @app.route("/kill_all")
 def kill_all():
     kill_sessions_automatic()
-    return redirect(url_for("index"))
+    return redirect("https://cloud.multfer.com.br/session")
 
 # -------------------------------------------------------------------
 # KILL INDIVIDUAL
@@ -266,7 +263,7 @@ def kill_session(sid, serial):
         cursor.execute(f"ALTER SYSTEM KILL SESSION '{sid},{serial}' IMMEDIATE")
         connection.commit()
         logger.info(f"Kill individual executado SID={sid} SERIAL={serial}")
-        return redirect(url_for("index"))
+        return redirect("https://cloud.multfer.com.br/session")
     except Exception as e:
         logger.error(f"Erro no kill individual SID={sid}: {e}")
         return jsonify({"error": str(e)}), 500
