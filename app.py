@@ -6,7 +6,7 @@ from logging.handlers import RotatingFileHandler
 import pytz
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
-from flask import Flask, render_template, redirect, url_for, request, jsonify
+from flask import Flask, render_template, redirect, request, jsonify
 
 from db import run_query, execute_command, get_connection
 
@@ -15,7 +15,9 @@ LOG_DIR = os.path.join(BASE_DIR, "logs")
 os.makedirs(LOG_DIR, exist_ok=True)
 
 APP_LOG_FILE = os.path.join(LOG_DIR, "oracle_kill_monitor.log")
+
 SESSIONS_LOG_FILE = os.path.join(LOG_DIR, "sessions_snapshot.log")
+KILLED_SESSIONS_LOG_FILE = os.path.join(LOG_DIR, "killed_sessions.log")
 
 # -------------------------------------------------------------------
 # LOGGING
@@ -42,18 +44,29 @@ console_handler.setFormatter(formatter)
 logger.addHandler(file_handler)
 logger.addHandler(console_handler)
 
+# Logger para snapshot de sessões
 sessions_logger = logging.getLogger("sessions_snapshot")
 sessions_logger.setLevel(logging.INFO)
-
 sessions_handler = RotatingFileHandler(
     SESSIONS_LOG_FILE,
     maxBytes=100 * 1024 * 1024,  # 100MB
     backupCount=2,
     encoding="utf-8"
 )
-
 sessions_handler.setFormatter(logging.Formatter("%(message)s"))
 sessions_logger.addHandler(sessions_handler)
+
+# Logger para sessões eliminadas
+killed_sessions_logger = logging.getLogger("killed_sessions")
+killed_sessions_logger.setLevel(logging.INFO)
+killed_sessions_handler = RotatingFileHandler(
+    KILLED_SESSIONS_LOG_FILE,
+    maxBytes=100 * 1024 * 1024,  # 100MB
+    backupCount=2,
+    encoding="utf-8"
+)
+killed_sessions_handler.setFormatter(logging.Formatter("%(message)s"))
+killed_sessions_logger.addHandler(killed_sessions_handler)
 
 SYSTEM_LOG_PATH = os.path.join(
     os.path.dirname(os.path.abspath(__file__)),
@@ -142,6 +155,7 @@ def kill_sessions_automatic():
     cols = last_result["cols"]
     rows = last_result["rows"]
 
+
     kill_idx = cols.index("KILL")
     user_idx = cols.index("USERNAME")
     horas_idx = cols.index("HORAS")
@@ -150,8 +164,11 @@ def kill_sessions_automatic():
     client_idx = cols.index("CLIENT_INFO")
     machine_idx = cols.index("MACHINE")
     pga_used_idx = cols.index("PGA_USED_MB")
+    sid_idx = cols.index("SID")
+    serial_idx = cols.index("SERIAL#")
 
     killed_count = 0
+
 
     for r in rows:
         username = str(r[user_idx]).upper()
@@ -186,6 +203,14 @@ def kill_sessions_automatic():
                             f"USER = {username} | HORAS = {horas} | MINUTOS = {minutos} | "
                             f"EVENT = {event} | CLIENT = {client} | CMD = {cmd} | MACHINE = {machine}"
                             f" | PGA_USED_MB = {used_memory}")
+
+                # Log no killed_sessions
+                timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                killed_sessions_logger.info(
+                    f"{timestamp} | USER={username} | SID={r[sid_idx]} | SERIAL={r[serial_idx]} | "
+                    f"HORAS={horas} | MINUTOS={minutos} | CLIENT={client} | EVENT={event} | MACHINE={machine} | "
+                    f"PGA_USED_MB={used_memory} | KILL_CMD={cmd}"
+                )
             except Exception as e:
                 logger.error(f"Erro ao matar sessão {username}: {e}")
 
@@ -263,10 +288,28 @@ def kill_session(sid, serial):
         cursor.execute(f"ALTER SYSTEM KILL SESSION '{sid},{serial}' IMMEDIATE")
         connection.commit()
         logger.info(f"Kill individual executado SID={sid} SERIAL={serial}")
+
+        # Log no killed_sessions
+        timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        killed_sessions_logger.info(
+            f"{timestamp} | USER={username} | SID={sid} | SERIAL={serial} | KILL_CMD=ALTER SYSTEM KILL SESSION '{sid},{serial}' IMMEDIATE"
+        )
         return redirect("https://cloud.multfer.com.br/session")
     except Exception as e:
         logger.error(f"Erro no kill individual SID={sid}: {e}")
         return jsonify({"error": str(e)}), 500
+
+@app.route("/killed_sessions")
+def killed_sessions():
+    today = datetime.now().strftime("%Y-%m-%d")
+    log_path = KILLED_SESSIONS_LOG_FILE
+    log_content = ""
+    if os.path.exists(log_path):
+        with open(log_path, "r", encoding="utf-8") as f:
+            lines = f.readlines()
+            # Filtra apenas sessões eliminadas do dia vigente
+            log_content = ''.join([line for line in lines if line.startswith(today)])
+    return render_template("killed_sessions.html", log_content=log_content)
 
 @app.after_request
 def set_cache_headers(response):

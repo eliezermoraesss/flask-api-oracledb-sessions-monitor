@@ -3567,3 +3567,922 @@ Help: https://docs.oracle.com/error-help/db/ora-00030/
 
 2026-02-26 15:52:09,914 | INFO | Sessões monitoradas: 2 ativas
 
+2026-03-24 16:16:34,073 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-03-24 16:16:34,230 | INFO | Scheduler iniciado
+2026-03-24 16:16:38,760 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 16:16:45,084 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:16:48,439 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 16:16:51,840 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 16:16:54,407 | INFO | Kill individual executado SID=2633 SERIAL=56008
+2026-03-24 16:17:00,001 | INFO | Job automático iniciado
+2026-03-24 16:17:00,339 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:17:00,340 | INFO | Total de sessões encerradas: 0
+2026-03-24 16:17:00,341 | INFO | Job automático finalizado
+
+2026-03-24 16:17:00,360 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 16:17:03,320 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 16:17:09,200 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:17:15,011 | INFO | Job automático iniciado
+2026-03-24 16:17:15,413 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:17:15,414 | INFO | Total de sessões encerradas: 0
+2026-03-24 16:17:15,414 | INFO | Job automático finalizado
+
+2026-03-24 16:17:17,478 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:17:20,919 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 16:17:24,592 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 16:17:27,956 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:17:31,414 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 16:17:34,873 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:17:38,256 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 16:17:41,697 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 16:17:45,170 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 16:17:48,626 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:03:06,524 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-03-24 17:03:06,580 | INFO | Scheduler iniciado
+2026-03-24 17:03:10,529 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:03:15,010 | INFO | Job automático iniciado
+2026-03-24 17:03:15,120 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:03:15,122 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:03:15,122 | INFO | Job automático finalizado
+
+2026-03-24 17:03:15,209 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:03:18,378 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:03:21,582 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:03:25,712 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 17:06:29,033 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-03-24 17:06:29,094 | INFO | Scheduler iniciado
+2026-03-24 17:06:33,463 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:06:36,869 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:06:44,079 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:06:59,215 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:07:00,004 | INFO | Job automático iniciado
+2026-03-24 17:07:00,083 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:07:00,087 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:07:00,088 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:07:00,088 | INFO | Job automático finalizado
+
+2026-03-24 17:07:03,076 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:07:15,010 | INFO | Job automático iniciado
+2026-03-24 17:07:15,105 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 17:07:15,105 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:07:15,105 | INFO | Job automático finalizado
+
+2026-03-24 17:08:00,004 | INFO | Job automático iniciado
+2026-03-24 17:08:00,112 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 17:08:00,113 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:08:00,113 | INFO | Job automático finalizado
+
+2026-03-24 17:08:00,130 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 17:08:03,122 | INFO | Sessões monitoradas: 13 ativas
+
+2026-03-24 17:08:15,010 | INFO | Job automático iniciado
+2026-03-24 17:08:15,102 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:08:15,103 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:08:15,103 | INFO | Job automático finalizado
+
+2026-03-24 17:08:50,184 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:08:53,341 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:08:56,511 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:08:59,669 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:09:00,003 | INFO | Job automático iniciado
+2026-03-24 17:09:00,066 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:09:00,069 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:09:00,069 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:09:00,069 | INFO | Job automático finalizado
+
+2026-03-24 17:09:02,835 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:09:03,076 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:09:06,005 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:09:09,173 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:09:12,316 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:15,011 | INFO | Job automático iniciado
+2026-03-24 17:09:15,100 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:15,100 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:09:15,101 | INFO | Job automático finalizado
+
+2026-03-24 17:09:15,445 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:09:18,600 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:09:21,778 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:09:24,920 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:09:28,063 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:09:31,206 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:34,357 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:37,499 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:09:40,640 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:43,798 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:46,961 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:50,104 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:09:53,277 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:09:56,436 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:09:59,573 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:10:00,007 | INFO | Job automático iniciado
+2026-03-24 17:10:00,077 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:10:00,081 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:10:00,082 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:10:00,082 | INFO | Job automático finalizado
+
+2026-03-24 17:10:02,732 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:10:03,061 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:10:05,882 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:10:09,028 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:10:12,192 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:10:15,008 | INFO | Job automático iniciado
+2026-03-24 17:10:15,109 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:10:15,110 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:10:15,110 | INFO | Job automático finalizado
+
+2026-03-24 17:10:15,338 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:10:18,515 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:10:21,664 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:10:24,834 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:10:27,993 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:10:32,044 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:10:35,334 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:10:38,490 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:10:41,688 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:10:44,893 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:13:48,970 | INFO | Iniciando Oracle Kill Sessions Monitor
+2026-03-24 17:13:49,014 | INFO | Scheduler iniciado
+2026-03-24 17:13:52,088 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:13:55,327 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:13:57,260 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:13:58,472 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:14:00,013 | INFO | Job automático iniciado
+2026-03-24 17:14:00,082 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:14:00,095 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:00,095 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:14:00,095 | INFO | Job automático finalizado
+
+2026-03-24 17:14:00,803 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:14:01,646 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:03,065 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:14:04,860 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:14:08,098 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:14:11,329 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:14:14,520 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:15,003 | INFO | Job automático iniciado
+2026-03-24 17:14:15,062 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:15,062 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:14:15,062 | INFO | Job automático finalizado
+
+2026-03-24 17:14:17,708 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:14:20,908 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:14:24,109 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:14:24,751 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:14:27,252 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:14:30,411 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:14:33,621 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:14:36,829 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:14:40,004 | INFO | Sessões monitoradas: 13 ativas
+
+2026-03-24 17:14:43,182 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:46,313 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:14:49,481 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:52,645 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:56,131 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:14:59,669 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:15:00,006 | INFO | Job automático iniciado
+2026-03-24 17:15:00,453 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:15:00,453 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:15:00,455 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:15:00,455 | INFO | Job automático finalizado
+
+2026-03-24 17:15:02,844 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:15:03,072 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:15:06,009 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:15:09,192 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:15:12,361 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:15:15,010 | INFO | Job automático iniciado
+2026-03-24 17:15:15,062 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:15:15,063 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:15:15,063 | INFO | Job automático finalizado
+
+2026-03-24 17:15:15,557 | INFO | Sessões monitoradas: 13 ativas
+
+2026-03-24 17:15:18,776 | INFO | Sessões monitoradas: 17 ativas
+
+2026-03-24 17:15:21,947 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:15:25,141 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:15:28,411 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:15:31,623 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:15:34,819 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 17:15:38,006 | INFO | Sessões monitoradas: 13 ativas
+
+2026-03-24 17:15:41,280 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:15:44,603 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:15:47,932 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:15:51,111 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:15:54,279 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:15:57,459 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:16:00,011 | INFO | Job automático iniciado
+2026-03-24 17:16:00,079 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:16:00,080 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:16:00,081 | INFO | Job automático finalizado
+
+2026-03-24 17:16:00,086 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:16:00,663 | INFO | Sessões monitoradas: 16 ativas
+
+2026-03-24 17:16:03,113 | INFO | Sessões monitoradas: 13 ativas
+
+2026-03-24 17:16:03,885 | INFO | Sessões monitoradas: 13 ativas
+
+2026-03-24 17:16:07,075 | INFO | Sessões monitoradas: 15 ativas
+
+2026-03-24 17:16:10,311 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:16:13,628 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:16:15,010 | INFO | Job automático iniciado
+2026-03-24 17:16:15,095 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:16:15,096 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:16:15,096 | INFO | Job automático finalizado
+
+2026-03-24 17:16:16,838 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:16:20,011 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:16:23,168 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:16:26,396 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:16:29,565 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:16:32,732 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:16:35,919 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:16:39,104 | INFO | Sessões monitoradas: 4 ativas
+
+2026-03-24 17:16:42,265 | INFO | Sessões monitoradas: 4 ativas
+
+2026-03-24 17:16:45,431 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:16:48,612 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:16:51,878 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:16:55,081 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:16:58,280 | INFO | Sessões monitoradas: 4 ativas
+
+2026-03-24 17:17:00,009 | INFO | Job automático iniciado
+2026-03-24 17:17:00,116 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:00,118 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:17:00,119 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:17:00,119 | INFO | Job automático finalizado
+
+2026-03-24 17:17:01,452 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:03,152 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:17:04,681 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:17:07,972 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:11,164 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:17:14,393 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:15,003 | INFO | Job automático iniciado
+2026-03-24 17:17:15,062 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:17:15,063 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:17:15,064 | INFO | Job automático finalizado
+
+2026-03-24 17:17:17,546 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:20,707 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:17:23,885 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:17:27,073 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:17:30,235 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:33,446 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:36,642 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:17:39,890 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:17:43,101 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:46,362 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:49,553 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:17:52,737 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:17:55,951 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:17:59,260 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:18:00,004 | INFO | Job automático iniciado
+2026-03-24 17:18:00,107 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:18:00,108 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:18:00,108 | INFO | Job automático finalizado
+
+2026-03-24 17:18:00,136 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:18:02,471 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:18:03,079 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:18:05,678 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:18:08,821 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:18:12,016 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:18:15,003 | INFO | Job automático iniciado
+2026-03-24 17:18:15,137 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:18:15,138 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:18:15,138 | INFO | Job automático finalizado
+
+2026-03-24 17:18:15,212 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:18:18,387 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:18:21,535 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:18:24,864 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:18:28,057 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:18:31,220 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:18:34,401 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:18:37,632 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:18:41,088 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:18:44,430 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:18:47,637 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:18:50,866 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:18:54,105 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:18:57,290 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:00,004 | INFO | Job automático iniciado
+2026-03-24 17:19:00,080 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:19:00,089 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:19:00,090 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:19:00,090 | INFO | Job automático finalizado
+
+2026-03-24 17:19:00,482 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:03,079 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:03,698 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:06,941 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:19:10,199 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:13,486 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:19:15,014 | INFO | Job automático iniciado
+2026-03-24 17:19:15,090 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:19:15,091 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:19:15,091 | INFO | Job automático finalizado
+
+2026-03-24 17:19:16,812 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:19:20,014 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:19:23,231 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:26,432 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:19:29,630 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:19:32,798 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:19:35,966 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:19:39,232 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:19:42,454 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:45,656 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:48,845 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:52,050 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:19:55,273 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:19:58,468 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:20:00,006 | INFO | Job automático iniciado
+2026-03-24 17:20:00,064 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:20:00,073 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:20:00,074 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:20:00,074 | INFO | Job automático finalizado
+
+2026-03-24 17:20:01,601 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:20:03,066 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:20:04,802 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:20:07,964 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:20:11,135 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:20:14,320 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:20:15,001 | INFO | Job automático iniciado
+2026-03-24 17:20:15,101 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:20:15,102 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:20:15,103 | INFO | Job automático finalizado
+
+2026-03-24 17:20:17,471 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:20:20,661 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:20:23,837 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:20:27,049 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:20:30,194 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:20:33,361 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:20:36,631 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:20:39,768 | INFO | Sessões monitoradas: 14 ativas
+
+2026-03-24 17:20:42,958 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:20:46,122 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:20:49,293 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:20:52,495 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:20:55,714 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:20:58,904 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:21:00,007 | INFO | Job automático iniciado
+2026-03-24 17:21:00,067 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:21:00,071 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:21:00,072 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:21:00,072 | INFO | Job automático finalizado
+
+2026-03-24 17:21:02,102 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:21:03,084 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:21:05,301 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:21:08,527 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:21:11,719 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:21:14,908 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:21:15,014 | INFO | Job automático iniciado
+2026-03-24 17:21:15,095 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:21:15,095 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:21:15,095 | INFO | Job automático finalizado
+
+2026-03-24 17:21:18,079 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:21:21,278 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:21:24,469 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:21:27,648 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:21:30,832 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:21:34,025 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:21:37,220 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:21:40,402 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:21:43,601 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:21:46,807 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:21:50,012 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:21:53,194 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:21:56,375 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:21:59,565 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:22:00,004 | INFO | Job automático iniciado
+2026-03-24 17:22:00,073 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:22:00,073 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:22:00,076 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:22:00,076 | INFO | Job automático finalizado
+
+2026-03-24 17:22:02,778 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:22:03,086 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:22:05,990 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:22:09,171 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:22:12,392 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:22:15,001 | INFO | Job automático iniciado
+2026-03-24 17:22:15,192 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:22:15,193 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:22:15,193 | INFO | Job automático finalizado
+
+2026-03-24 17:22:15,603 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:22:18,821 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:22:21,994 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:22:25,256 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:22:28,457 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:22:31,647 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:22:34,821 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:22:38,020 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:22:41,237 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:22:44,428 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:22:47,610 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:22:50,785 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:22:53,973 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:22:57,162 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:23:00,002 | INFO | Job automático iniciado
+2026-03-24 17:23:00,127 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:23:00,128 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:23:00,128 | INFO | Job automático finalizado
+
+2026-03-24 17:23:00,129 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:23:00,348 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:23:03,169 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:23:03,579 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:23:06,732 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:23:09,892 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:23:13,080 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:23:15,004 | INFO | Job automático iniciado
+2026-03-24 17:23:15,072 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:23:15,073 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:23:15,073 | INFO | Job automático finalizado
+
+2026-03-24 17:23:16,268 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:23:19,423 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:23:22,592 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:23:25,795 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:23:28,964 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:23:32,171 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:23:35,347 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:23:38,522 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:23:41,713 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:23:44,993 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:23:48,194 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:23:51,363 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:23:54,545 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:23:57,782 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 17:24:00,016 | INFO | Job automático iniciado
+2026-03-24 17:24:00,095 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:24:00,102 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:24:00,103 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:24:00,103 | INFO | Job automático finalizado
+
+2026-03-24 17:24:00,966 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:24:03,113 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:24:04,177 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:24:07,433 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:24:10,634 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:24:13,827 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:24:15,014 | INFO | Job automático iniciado
+2026-03-24 17:24:15,083 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:24:15,083 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:24:15,083 | INFO | Job automático finalizado
+
+2026-03-24 17:24:17,025 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:24:20,243 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:24:23,411 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:24:26,583 | INFO | Sessões monitoradas: 4 ativas
+
+2026-03-24 17:24:29,818 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:24:33,034 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:24:36,212 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:24:39,411 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:24:42,608 | INFO | Sessões monitoradas: 12 ativas
+
+2026-03-24 17:24:45,811 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:24:48,996 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:24:52,190 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:24:55,439 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:24:58,655 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:25:00,016 | INFO | Job automático iniciado
+2026-03-24 17:25:00,076 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:25:00,076 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:25:00,078 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:25:00,078 | INFO | Job automático finalizado
+
+2026-03-24 17:25:01,820 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:25:03,090 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:25:05,007 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:25:08,198 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:11,406 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:14,592 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:15,002 | INFO | Job automático iniciado
+2026-03-24 17:25:15,083 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:25:15,084 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:25:15,084 | INFO | Job automático finalizado
+
+2026-03-24 17:25:17,806 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:25:21,000 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:25:24,192 | INFO | Sessões monitoradas: 11 ativas
+
+2026-03-24 17:25:27,412 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:30,570 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:25:33,759 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:36,936 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:25:40,134 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:43,290 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:25:46,459 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:49,656 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:25:52,802 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:25:55,998 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:25:59,230 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:26:00,012 | INFO | Job automático iniciado
+2026-03-24 17:26:00,095 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:26:00,095 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:26:00,095 | INFO | Job automático finalizado
+
+2026-03-24 17:26:00,101 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:26:02,411 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:26:03,079 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:26:05,615 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:26:08,781 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:26:11,981 | INFO | Sessões monitoradas: 5 ativas
+
+2026-03-24 17:26:15,014 | INFO | Job automático iniciado
+2026-03-24 17:26:15,120 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:26:15,121 | INFO | Total de sessões encerradas: 0
+2026-03-24 17:26:15,121 | INFO | Job automático finalizado
+
+2026-03-24 17:26:15,166 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:26:18,343 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:26:21,481 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:26:24,681 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:26:27,871 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:26:31,100 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:26:34,301 | INFO | Sessões monitoradas: 8 ativas
+
+2026-03-24 17:26:37,490 | INFO | Sessões monitoradas: 6 ativas
+
+2026-03-24 17:26:40,646 | INFO | Sessões monitoradas: 10 ativas
+
+2026-03-24 17:26:43,827 | INFO | Sessões monitoradas: 9 ativas
+
+2026-03-24 17:26:47,028 | INFO | Sessões monitoradas: 7 ativas
+
+2026-03-24 17:26:50,217 | INFO | Sessões monitoradas: 10 ativas
+

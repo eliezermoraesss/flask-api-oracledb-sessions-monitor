@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <title>Monitor Sessões Oracle</title>
@@ -10,7 +11,8 @@
   <meta http-equiv="refresh" content="3">
 
   <style>
-    table.table-sm td, table.table-sm th {
+    table.table-sm td,
+    table.table-sm th {
       padding: 0.28rem 0.45rem !important;
       font-size: 0.86rem;
       vertical-align: middle;
@@ -32,58 +34,60 @@
 </head>
 
 <body class="bg-light">
-<div class="container mt-4 text-center">
+  <div class="container mt-4 text-center">
 
-  <h1 class="mb-4">Monitor de Sessões Oracle</h1>
+    <h1 class="mb-4">Monitor de Sessões Oracle</h1>
 
-  {% set total_sessoes = data.rows|length if data and data.rows else 0 %}
+    {% set total_sessoes = data.rows|length if data and data.rows else 0 %}
 
-  <div class="d-flex align-items-center justify-content-between mb-3">
+    <div class="d-flex align-items-center justify-content-between mb-3">
 
-    <a href="{{ url_for('logs') }}" class="btn btn-primary">
-      📊 Monitoramento
-    </a>
+      <a href="{{ url_for('logs') }}" class="btn btn-primary">
+        📊 Monitoramento
+      </a>
 
-    {% if total_sessoes >= 20 %}
+      <a href="{{ url_for('killed_sessions') }}" class="btn btn-info">
+        🗑 Log de Sessões Eliminadas de Hoje
+      </a>
+
+      {% if total_sessoes >= 20 %}
       <a href="{{ url_for('kill_all') }}" class="btn btn-danger">
         🚨 Matar todas as sessões ({{ total_sessoes }})
       </a>
-    {% endif %}
+      {% endif %}
 
-    {% if total_sessoes < 10 %}
-      <span id="sessionCount" class="badge bg-success">
+      {% if total_sessoes < 10 %} <span id="sessionCount" class="badge bg-success">
         Sessões Ativas: {{ total_sessoes }}
-      </span>
-    {% elif total_sessoes < 20 %}
-      <span id="sessionCount" class="badge bg-warning text-dark">
-        Sessões Ativas: {{ total_sessoes }}
-      </span>
-    {% else %}
-      <span id="sessionCount" class="badge bg-danger">
-        Sessões Ativas: {{ total_sessoes }}
-      </span>
-    {% endif %}
-  </div>
+        </span>
+        {% elif total_sessoes < 20 %} <span id="sessionCount" class="badge bg-warning text-dark">
+          Sessões Ativas: {{ total_sessoes }}
+          </span>
+          {% else %}
+          <span id="sessionCount" class="badge bg-danger">
+            Sessões Ativas: {{ total_sessoes }}
+          </span>
+          {% endif %}
+    </div>
 
-  <div class="table-responsive shadow rounded">
+    <div class="table-responsive shadow rounded">
 
-    <table class="table table-sm table-striped table-hover">
-      <thead class="table-dark">
-        <tr>
-          <th>Ação</th>
-          {% for col in data.cols if col != 'KILL' %}
+      <table class="table table-sm table-striped table-hover">
+        <thead class="table-dark">
+          <tr>
+            <th>Ação</th>
+            {% for col in data.cols if col != 'KILL' %}
             <th>{{ col }}</th>
-          {% endfor %}
-        </tr>
-      </thead>
+            {% endfor %}
+          </tr>
+        </thead>
 
-      <tbody>
+        <tbody>
 
-        {% if total_sessoes == 0 %}
+          {% if total_sessoes == 0 %}
           <tr>
             <td colspan="{{ data.cols|length }}">Nenhuma sessão ativa</td>
           </tr>
-        {% else %}
+          {% else %}
 
           {% set sid_idx = data.cols.index('SID') %}
           {% set serial_idx = data.cols.index('SERIAL#') %}
@@ -91,42 +95,42 @@
 
           {% for row in data.rows %}
 
-            {% set sid = row[sid_idx] %}
-            {% set serial = row[serial_idx] %}
-            {% set username = row[user_idx] if row[user_idx] else '' %}
+          {% set sid = row[sid_idx] %}
+          {% set serial = row[serial_idx] %}
+          {% set username = row[user_idx] if row[user_idx] else '' %}
 
-            <tr>
+          <tr>
 
-              <td>
-                {% if username in ['SYSTEM','SYS'] %}
-                  <button class="btn btn-sm btn-secondary" disabled>
-                    Protegido
-                  </button>
-                {% else %}
-                  <a href="/kill/{{ sid }}/{{ serial }}?username={{ username }}"
-                     class="btn btn-sm btn-outline-danger">
-                     Kill
-                  </a>
-                {% endif %}
-              </td>
+            <td>
+              {% if username in ['SYSTEM','SYS'] %}
+              <button class="btn btn-sm btn-secondary" disabled>
+                Protegido
+              </button>
+              {% else %}
+              <a href="/kill/{{ sid }}/{{ serial }}?username={{ username }}" class="btn btn-sm btn-outline-danger">
+                Kill
+              </a>
+              {% endif %}
+            </td>
 
-              {% for i in range(data.cols|length) %}
-                {% if data.cols[i] != 'KILL' %}
-                  <td class="ellipsis">
-                    {{ row[i] }}
-                  </td>
-                {% endif %}
-              {% endfor %}
+            {% for i in range(data.cols|length) %}
+            {% if data.cols[i] != 'KILL' %}
+            <td class="ellipsis">
+              {{ row[i] }}
+            </td>
+            {% endif %}
+            {% endfor %}
 
-            </tr>
+          </tr>
 
           {% endfor %}
-        {% endif %}
+          {% endif %}
 
-      </tbody>
-    </table>
+        </tbody>
+      </table>
 
+    </div>
   </div>
-</div>
 </body>
+
 </html>
