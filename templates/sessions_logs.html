@@ -30,6 +30,10 @@
     <div class="d-flex justify-content-between align-items-center mb-3">
       <h3>📊 Análise de Sessões</h3>
 
+      <a href="{{ url_for('download_log', log_type='sessions') }}" class="btn btn-success">
+        ⬇️ Download
+      </a>
+
       <a href="{{ url_for('logs') }}" class="btn btn-secondary">
         ⬅ Voltar
       </a>

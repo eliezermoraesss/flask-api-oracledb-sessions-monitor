@@ -6,7 +6,7 @@ from logging.handlers import RotatingFileHandler
 import pytz
 from apscheduler.schedulers.background import BackgroundScheduler
 from apscheduler.triggers.cron import CronTrigger
-from flask import Flask, render_template, redirect, request, jsonify
+from flask import Flask, render_template, redirect, request, jsonify, send_file, Response
 
 from db import run_query, execute_command, get_connection
 
@@ -204,12 +204,11 @@ def kill_sessions_automatic():
                             f"EVENT = {event} | CLIENT = {client} | CMD = {cmd} | MACHINE = {machine}"
                             f" | PGA_USED_MB = {used_memory}")
 
-                # Log no killed_sessions
+                # Log no killed_sessions (formato padronizado)
                 timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
                 killed_sessions_logger.info(
                     f"{timestamp} | USER={username} | SID={r[sid_idx]} | SERIAL={r[serial_idx]} | "
-                    f"HORAS={horas} | MINUTOS={minutos} | CLIENT={client} | EVENT={event} | MACHINE={machine} | "
-                    f"PGA_USED_MB={used_memory} | KILL_CMD={cmd}"
+                    f"HORAS={horas} | MINUTOS={minutos} | CLIENT={client} | EVENT={event} | MACHINE={machine}"
                 )
             except Exception as e:
                 logger.error(f"Erro ao matar sessão {username}: {e}")
@@ -231,9 +230,11 @@ def index():
 @app.route("/logs")
 def logs():
     try:
+        today = datetime.now().strftime("%Y-%m-%d")
         if os.path.exists(SYSTEM_LOG_PATH):
             with open(SYSTEM_LOG_PATH, "r", encoding="utf-8") as f:
-                log_content = f.read()
+                lines = f.readlines()
+                log_content = ''.join([line for line in lines if line.startswith(today)])
         else:
             log_content = "Arquivo de log não encontrado."
     except Exception as e:
@@ -250,9 +251,11 @@ def logs():
 @app.route("/sessions_snapshot")
 def sessions_snapshot():
     try:
+        today = datetime.now().strftime("%Y-%m-%d")
         if os.path.exists(SESSIONS_LOG_PATH):
             with open(SESSIONS_LOG_PATH, "r", encoding="utf-8") as f:
-                log_content = f.read()
+                lines = f.readlines()
+                log_content = ''.join([line for line in lines if line.startswith(today)])
         else:
             log_content = "Arquivo de log não encontrado."
     except Exception as e:
@@ -285,14 +288,28 @@ def kill_session(sid, serial):
     try:
         connection = get_connection()
         cursor = connection.cursor()
+        # Buscar detalhes da sessão antes do kill
+        cursor.execute(f"""
+            SELECT s.username, trunc(s.last_call_et/3600) as horas, trunc(s.last_call_et/60) as minutos,
+                   s.client_info, s.event, s.machine
+            FROM gv$session s
+            WHERE s.sid = :sid AND s.serial# = :serial
+        """, sid=sid, serial=serial)
+        session_row = cursor.fetchone()
+        if session_row:
+            user, horas, minutos, client, event, machine = session_row
+        else:
+            user, horas, minutos, client, event, machine = username, 0, 0, None, None, None
+
+        # Executar o kill
         cursor.execute(f"ALTER SYSTEM KILL SESSION '{sid},{serial}' IMMEDIATE")
         connection.commit()
         logger.info(f"Kill individual executado SID={sid} SERIAL={serial}")
 
-        # Log no killed_sessions
+        # Log detalhado no killed_sessions.log
         timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         killed_sessions_logger.info(
-            f"{timestamp} | USER={username} | SID={sid} | SERIAL={serial} | KILL_CMD=ALTER SYSTEM KILL SESSION '{sid},{serial}' IMMEDIATE"
+            f"{timestamp} | USER={user} | SID={sid} | SERIAL={serial} | HORAS={horas} | MINUTOS={minutos} | CLIENT={client} | EVENT={event} | MACHINE={machine}"
         )
         return redirect("https://cloud.multfer.com.br/session")
     except Exception as e:
@@ -310,6 +327,26 @@ def killed_sessions():
             # Filtra apenas sessões eliminadas do dia vigente
             log_content = ''.join([line for line in lines if line.startswith(today)])
     return render_template("killed_sessions.html", log_content=log_content)
+
+@app.route("/download_log/<log_type>")
+def download_log(log_type):
+    today = datetime.now().strftime("%Y-%m-%d")
+    if log_type == "system":
+        log_path = SYSTEM_LOG_PATH
+        filename = f"oracle_kill_monitor.log"
+    elif log_type == "sessions":
+        log_path = SESSIONS_LOG_PATH
+        filename = f"sessions_snapshot.log"
+    elif log_type == "killed":
+        log_path = KILLED_SESSIONS_LOG_FILE
+        filename = f"killed_sessions.log"
+    else:
+        return "Tipo de log inválido", 400
+
+    if not os.path.exists(log_path):
+        return "Arquivo de log não encontrado.", 404
+
+    return send_file(log_path, as_attachment=True, download_name=filename, mimetype="text/plain")
 
 @app.after_request
 def set_cache_headers(response):

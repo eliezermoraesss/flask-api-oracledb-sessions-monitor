@@ -28,11 +28,15 @@
   <div class="container mt-4">
 
     <div class="d-flex justify-content-between align-items-center mb-3">
-      <h3>📊 Monitoramento de Logs</h3>
+      <h3>📊 Monitoramento de Sessões</h3>
 
       <a href="{{ url_for('sessions_snapshot') }}" class="btn btn-primary">
           📊 Análise de Sessões
         </a>
+
+      <a href="{{ url_for('download_log', log_type='system') }}" class="btn btn-success">
+        ⬇️ Download
+      </a>
 
       <a href="https://cloud.multfer.com.br/session" class="btn btn-secondary">
         ⬅ Voltar
