@@ -87,7 +87,7 @@ app = Flask(__name__)
 
 QUERY = """
 select 'ALTER SYSTEM KILL SESSION '|| ''''||s.sid||','||s.serial#||'''' ||' IMMEDIATE' AS KILL,
-       trunc(s.last_call_et/3600) horas,
+       round(s.last_call_et/3600, 2) horas,
        trunc(s.last_call_et/60) minutos,
        round(p.pga_used_mem / 1024 / 1024, 2) AS pga_used_mb,
        s.username,
@@ -172,7 +172,7 @@ def kill_sessions_automatic():
 
     for r in rows:
         username = str(r[user_idx]).upper()
-        horas = int(r[horas_idx])
+        horas = float(r[horas_idx])
         minutos = int(r[minutos_idx])
         event = str(r[event_idx]).upper()
         client = str(r[client_idx]).upper()
