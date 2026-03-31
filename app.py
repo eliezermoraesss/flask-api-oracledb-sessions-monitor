@@ -186,7 +186,7 @@ def kill_sessions_automatic():
             and (horas >= 12
                 or used_memory >= 4000
                 or ("LATCH: CACHE BUFFERS CHAINS" in event and minutos >= 30)
-                or ("ROW LOCK CONTENTION" in event and minutos >= 30)
+                or ("ROW LOCK CONTENTION" in event and minutos >= 10)
                 or ("CPU QUANTUM" in event and minutos >= 30)
                 or ("LIBRARY CACHE LOCK" in event and minutos >= 30)
                 or ("ROW CACHE MUTEX" in event and used_memory >= 4000)
